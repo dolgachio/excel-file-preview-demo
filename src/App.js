@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
+
+const ExcelPreview = React.lazy(() => import('./components/ExcelPreview/ExcelPreview'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <section className="app">
+      <header className="app__header">
+        <h1>React Demo For Excel Files Preview</h1>
       </header>
-    </div>
+
+      <p>
+        For the demo we use the open source library <a href="https://github.com/SheetJS/sheetjs" rel="noopener noreferrer" target="_blank">SheetJS</a>
+      </p>
+
+      <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ExcelPreview />
+        </Suspense>
+      </div>
+
+      
+    </section>
   );
 }
 
