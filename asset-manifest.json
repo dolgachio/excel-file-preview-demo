@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/stas-dolgachov/excel-file-preview-demo/static/css/main.3becec29.chunk.css",
+    "main.js": "/stas-dolgachov/excel-file-preview-demo/static/js/main.8317eb53.chunk.js",
+    "main.js.map": "/stas-dolgachov/excel-file-preview-demo/static/js/main.8317eb53.chunk.js.map",
+    "runtime-main.js": "/stas-dolgachov/excel-file-preview-demo/static/js/runtime-main.d4a7d6af.js",
+    "runtime-main.js.map": "/stas-dolgachov/excel-file-preview-demo/static/js/runtime-main.d4a7d6af.js.map",
+    "static/css/2.e1fda516.chunk.css": "/stas-dolgachov/excel-file-preview-demo/static/css/2.e1fda516.chunk.css",
+    "static/js/2.03cd585c.chunk.js": "/stas-dolgachov/excel-file-preview-demo/static/js/2.03cd585c.chunk.js",
+    "static/js/2.03cd585c.chunk.js.map": "/stas-dolgachov/excel-file-preview-demo/static/js/2.03cd585c.chunk.js.map",
+    "static/css/3.f77bc271.chunk.css": "/stas-dolgachov/excel-file-preview-demo/static/css/3.f77bc271.chunk.css",
+    "static/js/3.c3b9fe56.chunk.js": "/stas-dolgachov/excel-file-preview-demo/static/js/3.c3b9fe56.chunk.js",
+    "static/js/3.c3b9fe56.chunk.js.map": "/stas-dolgachov/excel-file-preview-demo/static/js/3.c3b9fe56.chunk.js.map",
+    "static/js/4.fce1d0d9.chunk.js": "/stas-dolgachov/excel-file-preview-demo/static/js/4.fce1d0d9.chunk.js",
+    "static/js/4.fce1d0d9.chunk.js.map": "/stas-dolgachov/excel-file-preview-demo/static/js/4.fce1d0d9.chunk.js.map",
+    "index.html": "/stas-dolgachov/excel-file-preview-demo/index.html",
+    "precache-manifest.ecb4386b1af8031a4c76a64fc14cedc6.js": "/stas-dolgachov/excel-file-preview-demo/precache-manifest.ecb4386b1af8031a4c76a64fc14cedc6.js",
+    "service-worker.js": "/stas-dolgachov/excel-file-preview-demo/service-worker.js",
+    "static/css/2.e1fda516.chunk.css.map": "/stas-dolgachov/excel-file-preview-demo/static/css/2.e1fda516.chunk.css.map",
+    "static/css/3.f77bc271.chunk.css.map": "/stas-dolgachov/excel-file-preview-demo/static/css/3.f77bc271.chunk.css.map",
+    "static/css/main.3becec29.chunk.css.map": "/stas-dolgachov/excel-file-preview-demo/static/css/main.3becec29.chunk.css.map",
+    "static/js/2.03cd585c.chunk.js.LICENSE.txt": "/stas-dolgachov/excel-file-preview-demo/static/js/2.03cd585c.chunk.js.LICENSE.txt",
+    "static/js/4.fce1d0d9.chunk.js.LICENSE.txt": "/stas-dolgachov/excel-file-preview-demo/static/js/4.fce1d0d9.chunk.js.LICENSE.txt",
+    "static/media/xspreadsheet.css": "/stas-dolgachov/excel-file-preview-demo/static/media/58eaeb4e52248a5c75936c6f4c33a370.58eaeb4e.svg",
+    "static/media/index.less": "/stas-dolgachov/excel-file-preview-demo/static/media/index.7570d0c2.less"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d4a7d6af.js",
+    "static/js/4.fce1d0d9.chunk.js",
+    "static/css/main.3becec29.chunk.css",
+    "static/js/main.8317eb53.chunk.js"
+  ]
+}
