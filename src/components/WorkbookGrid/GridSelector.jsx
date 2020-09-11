@@ -16,7 +16,7 @@ function GridSelector({ gridOptions, onGridOptionChange, selectedGridOptionName 
         </label>
         );
 
-        let link = (<a className="grid-selector__link" href={option.link} rel="noopener noreferrer" target="_blank">{option.name}</a>);
+        let link = (<a className="grid-selector__link" key={option.name} href={option.link} rel="noopener noreferrer" target="_blank">{option.name}</a>);
 
         result.radios.push(radio);
         result.links.push(link);

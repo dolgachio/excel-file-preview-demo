@@ -1,9 +1,10 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import './WorkbookGrid.css';
 
 import GridSelector from './GridSelector';
-import SheetsSelector from './SheetsSelector/SheetsSelector';
+
+import ExcelXSpreadSheet from './x-spreadsheet/ExcelXSpreadSheet';
 import ExcelAgGrid from './ag-grid/ExcelAgGrid';
 
 let GridsEnum = {
@@ -29,27 +30,18 @@ let gridOptions = [
 
 function WorkBookGrid({ workbook }) {
 
-    let [sheetName, setActiveSheetName] = useState(workbook.SheetNames[0]);
     let [selectedGridOptionName, selectGridOptionName] = useState(GridsEnum.ReactDataGrid);
-
-    let onSheetNameChange = useCallback((event) => {
-        let sheetName = event.target.name;
-        setActiveSheetName(sheetName);
-    }, [setActiveSheetName]);
 
     let onGridOptionChange = useCallback((event) => {
         selectGridOptionName(event.target.value);
     }, [selectGridOptionName]);
 
-    let Sheet = useMemo(() => {
-        return workbook.Sheets[sheetName];
-    }, [workbook, sheetName]);
-
     return (
     <div>
         <GridSelector gridOptions={gridOptions} onGridOptionChange={onGridOptionChange} selectedGridOptionName={selectedGridOptionName} />
-        <SheetsSelector SheetNames={workbook.SheetNames} onSheetNameChange={onSheetNameChange} sheetName={sheetName}/>
-        {selectedGridOptionName === GridsEnum.AgGrid && <ExcelAgGrid Sheet={Sheet} />}
+        
+        {selectedGridOptionName === GridsEnum.AgGrid && <ExcelAgGrid workbook={workbook} />}
+        {selectedGridOptionName === GridsEnum.XSpreadSheet && <ExcelXSpreadSheet workbook={workbook} />}
     </div>
     );
 }
