@@ -1,0 +1,8 @@
+.grid-selector {
+    border: 2px solid #bada55;
+    padding: 10px;
+}
+
+.grid-selector__link {
+    margin-right: 10px;
+}

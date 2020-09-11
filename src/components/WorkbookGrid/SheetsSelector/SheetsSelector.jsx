@@ -13,7 +13,7 @@ function SheetsSelector({ SheetNames, onSheetNameChange, sheetName }) {
 
     return (
     <div className="sheets-selector">
-        <h6>Sheets: </h6>
+        <h2>Sheets: </h2>
         {SheetsNames}
     </div>
     );

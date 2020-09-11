@@ -15,7 +15,7 @@ function ExcelAgGrid({ Sheet }) {
 
     return (
     <div className="excel-ag-grid-container ag-theme-alpine">
-    <h5>Ag-Grid Rendering version</h5>
+    <h2>Ag-Grid Rendering version</h2>
     
     <AgGridReact
         defaultColDef={

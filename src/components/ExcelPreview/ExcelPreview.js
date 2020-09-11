@@ -20,11 +20,8 @@ function ExcelPreview() {
           let data = new Uint8Array(event.target.result);   
           let workbook = XLSX.read(data, { type: 'array', cellStyles: true });
 
-          console.log(workbook);
-
           workbook.SheetNames.forEach((SheetName) => {
               let sheetJSON = XLSX.utils.sheet_to_json(workbook.Sheets[SheetName], { raw: false, header: 'A', blankrows: false, cellStyles: true });
-              console.log(JSON.stringify(sheetJSON));
               getColumnDefs(sheetJSON);
           });
 
@@ -35,7 +32,7 @@ function ExcelPreview() {
 
     return (
     <div className="excel-preview ">
-        <p>We support: *.xls, *.xlsx, *.csv files</p>
+        <p>We support: *.xls, *.xlsx, *.csv files. Please, chose some file for preview.</p>
 
         <input
             onChange={onFileChange}
