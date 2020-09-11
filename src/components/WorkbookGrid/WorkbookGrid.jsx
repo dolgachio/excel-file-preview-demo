@@ -1,28 +1,27 @@
 import React, { useState, useCallback, useMemo } from 'react';
 
-function WorkbookGrid({ workbook }) {
+import SheetsSelector from './SheetsSelector/SheetsSelector';
+import ExcelAgGrid from './ag-grid/ExcelAgGrid';
 
-    let [activeSheetName, setActiveSheetName] = useState(null); 
+function WorkBookGrid({ workbook }) {
+
+    let [sheetName, setActiveSheetName] = useState(workbook.SheetNames[0]);
 
     let onSheetNameChange = useCallback((event) => {
         let sheetName = event.target.name;
         setActiveSheetName(sheetName);
     }, [setActiveSheetName]);
 
-    let SheetsNames = useMemo(() => workbook.SheetNames
-        .map((name) => (<button key={name} name={name} onClick={onSheetNameChange}>{name}</button>)), 
-        [workbook, onSheetNameChange]);
+    let Sheet = useMemo(() => {
+        return workbook.Sheets[sheetName];
+    }, [workbook, sheetName]);
 
     return (
-    <>
-    <h4>Available Sheets from file:</h4>
     <div>
-        {SheetsNames}
+        <SheetsSelector SheetNames={workbook.SheetNames} onSheetNameChange={onSheetNameChange} sheetName={sheetName}/>
+        <ExcelAgGrid Sheet={Sheet} />
     </div>
-
-    <div>{activeSheetName}</div>
-    </>
     );
 }
 
-export default WorkbookGrid;
+export default WorkBookGrid;

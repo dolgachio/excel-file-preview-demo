@@ -1,0 +1,16 @@
+.sheets-selector {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sheets-selector__button {
+    background-color:  #1ebbd7;
+    color: white;
+    margin-right: 10px;
+    border-radius: 2px;
+    border: none;
+}
+
+.sheets-selector__button_active {
+    background-color: #189ad3;
+}
