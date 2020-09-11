@@ -27,7 +27,7 @@ function GridSelector({ gridOptions, onGridOptionChange, selectedGridOptionName 
     return (
     <div className="grid-selector">
         <p>
-            We use {options.links.length} different libraries for displaying data. Here you can find links to the: {options.links}.
+            We use {options.links.length} different libraries for displaying data. Here you can find links to them: {options.links}.
         </p>
         <p>
             For parsing files we use the <a href="https://github.com/SheetJS/sheetjs" rel="noopener noreferrer" target="_blank">SheetJS</a>

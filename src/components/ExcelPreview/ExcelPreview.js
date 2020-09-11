@@ -31,11 +31,10 @@ function ExcelPreview() {
     }, [setWorkbook]);
 
     return (
-    <div className="excel-preview ">
+    <div className="excel-preview">
         <p>We support: *.xls, *.xlsx, *.csv files. Please, chose some file for preview.</p>
 
-        <input
-            onChange={onFileChange}
+        <input onChange={onFileChange}
             accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
             className="excel-preview__input-file" 
             type="file" />
