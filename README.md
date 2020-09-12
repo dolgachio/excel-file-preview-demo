@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Preview on gh-pages
 
-[Preview Demo](https://stas-dolgachov.github.io/react-excel-file-preview-demo/)
+[Preview Demo](https://stas-dolgachov.github.io/excel-file-preview-demo/)
 
 ## Available Scripts
 
