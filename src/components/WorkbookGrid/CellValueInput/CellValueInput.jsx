@@ -6,7 +6,7 @@ function CellValueInput({ cellValue, onCellDataRequest }) {
     let [ cellName, setCellName ] = useState('');
 
     return (
-    <div className="cell-value-input">
+    <form onSubmit={(event) => {event.preventDefault(); onCellDataRequest(cellName);}} className="cell-value-input">
         <div>Get Value From The Cell</div>
 
         <p>
@@ -19,12 +19,12 @@ function CellValueInput({ cellValue, onCellDataRequest }) {
                 onChange={(event) => setCellName(event.target.value)}/>
         </div>
 
-        <button onClick={() => onCellDataRequest(cellName)}>Get Cell Value</button>
+        <button type="submit">Get Cell Value</button>
 
         <div className="cell-value-input__cell-value">
             The cell value is: <b>{cellValue || 'Cell value is not available or empty...'}</b>
         </div>
-    </div>
+    </form>
     )
 }
 
