@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 
 import './WorkbookGrid.css';
 
-import GridSelector from './GridSelector';
+import GridSelector from './GridSelector/GridSelector';
 
 import ExcelXSpreadSheet from './x-spreadsheet/ExcelXSpreadSheet';
 import ExcelAgGrid from './ag-grid/ExcelAgGrid';

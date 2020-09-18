@@ -1,0 +1,9 @@
+.cell-value-input {
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.cell-value-input__field {
+    display: inline-block;
+    margin-right: 10px;
+}

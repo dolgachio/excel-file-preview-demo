@@ -7,7 +7,12 @@ import '../../../../node_modules/x-data-spreadsheet/dist/xspreadsheet.css';
 
 import './ExcelXSpreadSheet.css';
 
+import CellValueInput from '../CellValueInput/CellValueInput';
+import { useCellValue } from '../useCellValue.hook';
+
 function ExcelXSpreadSheet({ workbook }) {
+    let [cellValue, onCellDataRequest] = useCellValue(workbook);
+    
     let gridContainerRef = useRef(null);
 
     let out = useMemo(() => {
@@ -27,7 +32,6 @@ function ExcelXSpreadSheet({ workbook }) {
         
         return out;
     }, [workbook]);
-
 
     useEffect(() => {
         let grid;
@@ -53,6 +57,8 @@ function ExcelXSpreadSheet({ workbook }) {
     return (
     <div className="excel-x-spreadsheet">
         <h2>X-spreadsheet Rendering version</h2>
+
+        <CellValueInput cellValue={cellValue} onCellDataRequest={onCellDataRequest} />
     
         <div ref={gridContainerRef} className="excel-x-spreadsheet-grid-container"></div>
     </div>

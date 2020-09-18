@@ -11,8 +11,12 @@ import { xlsxToJson } from '../../../utils/xlsxToJson';
 
 import SheetsSelector from '../SheetsSelector/SheetsSelector';
 
+import CellValueInput from '../CellValueInput/CellValueInput';
+import { useCellValue } from '../useCellValue.hook';
+
 function ExcelAgGrid({ workbook }) {
     let [sheetName, setActiveSheetName] = useState(workbook.SheetNames[0]);
+    let [cellValue, onCellDataRequest] = useCellValue(workbook);
     
     let Sheet = useMemo(() => {
         return workbook.Sheets[sheetName];
@@ -29,6 +33,8 @@ function ExcelAgGrid({ workbook }) {
     return (
     <div>
         <h2>Ag-Grid Rendering version</h2>
+
+        <CellValueInput cellValue={cellValue} onCellDataRequest={onCellDataRequest} />
 
         <SheetsSelector SheetNames={workbook.SheetNames} 
             onSheetNameChange={onSheetNameChange}

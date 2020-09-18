@@ -2,7 +2,6 @@ import React from 'react';
 
 import './GridSelector.css';
 
-
 function GridSelector({ gridOptions, onGridOptionChange, selectedGridOptionName }) {
 
     let options = gridOptions.reduce((result, option) => {
